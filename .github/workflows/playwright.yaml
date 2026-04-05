@@ -6,7 +6,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  CI-CD-Playwright:
+  Playwright-Tests:
     timeout-minutes: 3
     runs-on: ubuntu-latest
     steps:
