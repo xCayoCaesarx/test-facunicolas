@@ -54,11 +54,10 @@ Asegúrate de tener instalado:
 *   **Ejecutar todas las pruebas:**
     ```bash
     npx playwright test
-    ```
-
+```
 *   **Ejecutar en modo encabezado (UI):**
     ```bash
-    npx playwright test --ui
+    npx playwright test --headed
     ```
 
 *   **Ejecutar un archivo específico:**
