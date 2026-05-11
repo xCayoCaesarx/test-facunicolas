@@ -39,6 +39,7 @@ Asegúrate de tener instalado:
 2.  **Instalar dependencias:**
     ```bash
     npm install
+# to install
     ```
 
 3.  **Instalar los navegadores de Playwright:**
