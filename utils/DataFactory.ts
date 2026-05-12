@@ -3,7 +3,16 @@ import { FormData } from '../pages/DemoQAPages/form.page';
 import path from 'path';
 
 export const createRandomUser = (): FormData => {
-    const randomDate = faker.date.birthdate({ min: 18, max: 50, mode: 'age' });
+    const randomDate = (() => {
+        const date = faker.date.birthdate?.({ min: 18, max: 50, mode: 'age' });
+        if (date instanceof Date && !Number.isNaN(date.getTime())) {
+            return date;
+        }
+        const year = new Date().getFullYear() - (18 + Math.floor(Math.random() * 33));
+        const month = Math.floor(Math.random() * 12);
+        const day = Math.floor(Math.random() * 28) + 1;
+        return new Date(year, month, day);
+    })();
 
     const day = randomDate.getDate().toString().padStart(2, '0');
     const month = randomDate.toLocaleString('en-US', { month: 'short' });
