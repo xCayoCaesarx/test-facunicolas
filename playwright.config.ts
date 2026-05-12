@@ -1,5 +1,11 @@
-import { defineConfig, devices } from '@playwright/test';
-//import path from 'path/win32';
+// @ts-check
+const { defineConfig, devices } = require('@playwright/test');
+
+/** @type {import('@playwright/test').PlaywrightTestConfig} */
+module.exports = defineConfig({
+  testDir: './tests',
+  // ... resto de config
+});
 
 /**
  * Read environment variables from file.
@@ -77,3 +83,4 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
