@@ -17,7 +17,7 @@ import { SortablePage } from '../pages/DemoQAPages/sortable.page';
 // Definimos los tipos de lo que vamos a inyectar
 type MyFixtures = {
     webTablesPage: WebTablesPage;
-    checkBoxPage: CheckboxPage;
+    checkBoxPage: CheckboxPages;
     buttonsPage: ButtonsPage;
     linksPage: LinksPage;
     bookStoreLoginPage: BookStoreLoginPage;
