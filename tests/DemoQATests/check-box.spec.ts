@@ -29,6 +29,6 @@ test('Test dinamico de texto al seleccionar los checkboxes', async ({ checkBoxPa
     await expect(checkBoxPage.successTexts.first()).toBeVisible();
 
     results.forEach((result: string) => {
-        expect(treeTitles, `El label ${result} no está en el árbol`).toContain('fail');//result
+        expect(treeTitles, `El label ${result} no está en el árbol`).toContain(result);
     });
 });

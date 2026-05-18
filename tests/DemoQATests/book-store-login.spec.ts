@@ -26,7 +26,7 @@ test("Prueba de login en Book Store con variables de entorno", async ({ bookStor
 
     if (!isLogged) {
         console.log("Usuario no encontrado o sesión fallida. Intentando crear usuario...");
-        await bookStoreLoginPage.createUser(user, pass);
+        await bookStoreLoginPage.createUser(user, 'pass');
         
         // Reintento de login tras creación
         await bookStoreLoginPage.navigateLogin();
