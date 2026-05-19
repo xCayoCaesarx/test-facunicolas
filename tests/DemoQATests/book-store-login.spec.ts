@@ -7,7 +7,7 @@ pueda verificar cual fue la logica que usé para los mismos
 */
 
 test("Prueba de login en Book Store con variables de entorno", async ({ bookStoreLoginPage }) => {    
-    const user = 'cayo';//process.env.bookStoreUserName;
+    const user = process.env.bookStoreUserName;
     const pass = process.env.bookStorePassword;
 
     // 1. Validación de credenciales
